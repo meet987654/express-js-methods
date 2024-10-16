@@ -3,7 +3,7 @@ const express=require("express");
 const app=express();
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://admin:ZpaEp1woepiFGQcF@cluster0.pr6f0.mongodb.net/user_app?retryWrites=true&w=majority")
+mongoose.connect("databaseUrl")
 
 const User=mongoose.model('Users',{name:String,email:String,password:String});
 app.post("/signup",async function(req,res){
